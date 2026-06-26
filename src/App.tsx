@@ -2,6 +2,7 @@ import { useState, useRef, useCallback } from 'react'
 import backgroundsData from './data/backgrounds.json'
 import spellsData from './data/spells.json'
 import vicesData from './data/vices.json'
+import { getRandomSamples, rollVice, rollViceSelection } from './lib/viceRoll'
 import './App.css'
 
 type Spell = {
@@ -59,23 +60,11 @@ const vices = vicesData.vices as Vice[]
 
 const getRandomItem = <T,>(items: readonly T[]) => items[Math.floor(Math.random() * items.length)]
 
-const getRandomSamples = <T,>(items: readonly T[], count: number) => {
-  const itemsCopy = [...items]
-  const selected: T[] = []
-
-  while (selected.length < count && itemsCopy.length > 0) {
-    const index = Math.floor(Math.random() * itemsCopy.length)
-    selected.push(itemsCopy.splice(index, 1)[0])
-  }
-
-  return selected
-}
-
 const makeCharacter = (): Character => {
   const race = getRandomItem(races)
   const background = getRandomItem(backgrounds)
   const spellsSelection = getRandomSamples(spells, 3)
-  const vicesSelection = getRandomSamples(vices, 2)
+  const vicesSelection = rollViceSelection(vices, 2)
 
   return {
     name: `${getRandomItem(names)} ${getRandomItem(['Swift', 'Stone', 'Vale', 'Wren'])}`,
@@ -159,9 +148,83 @@ function App() {
   } as const
 
   const [character, setCharacter] = useState<Character>(makeCharacter())
+  const [isViceModalOpen, setIsViceModalOpen] = useState(false)
+  const [viceModalMode, setViceModalMode] = useState<'choose' | 'roll'>('choose')
+  const [viceModalSelection, setViceModalSelection] = useState(vices[0]?.name ?? '')
+  const [viceModalPreview, setViceModalPreview] = useState<Vice | null>(null)
+  const [viceModalRoll, setViceModalRoll] = useState<number | null>(null)
 
   const rollNewCharacter = () => {
     setCharacter(makeCharacter())
+  }
+
+  const addVice = (vice: Vice) => {
+    setCharacter((currentCharacter) => {
+      if (currentCharacter.vices.some((existingVice) => existingVice.name === vice.name)) {
+        return currentCharacter
+      }
+
+      return {
+        ...currentCharacter,
+        vices: [...currentCharacter.vices, vice],
+      }
+    })
+  }
+
+  const removeVice = (viceName: string) => {
+    setCharacter((currentCharacter) => ({
+      ...currentCharacter,
+      vices: currentCharacter.vices.filter((vice) => vice.name !== viceName),
+    }))
+  }
+
+  const availableVices = vices.filter((vice) => !character.vices.some((existingVice) => existingVice.name === vice.name))
+
+  const openViceModal = () => {
+    const firstAvailableVice = availableVices[0]
+    setViceModalMode('choose')
+    setViceModalSelection(firstAvailableVice?.name ?? '')
+    setViceModalPreview(firstAvailableVice ?? null)
+    setViceModalRoll(null)
+    setIsViceModalOpen(true)
+  }
+
+  const closeViceModal = () => {
+    setIsViceModalOpen(false)
+    setViceModalPreview(null)
+    setViceModalRoll(null)
+  }
+
+  const handleViceSelectionChange = (viceName: string) => {
+    setViceModalSelection(viceName)
+    const chosenVice = vices.find((vice) => vice.name === viceName) ?? null
+    setViceModalPreview(chosenVice)
+    setViceModalRoll(null)
+    setViceModalMode('choose')
+  }
+
+  const rollViceForModal = () => {
+    const rolled = rollVice(availableVices)
+
+    if (!rolled) {
+      setViceModalPreview(null)
+      setViceModalRoll(null)
+      setViceModalMode('roll')
+      return
+    }
+
+    setViceModalPreview(rolled.vice)
+    setViceModalRoll(rolled.roll)
+    setViceModalMode('roll')
+  }
+
+  const confirmViceSelection = () => {
+    if (!viceModalPreview) {
+      return
+    }
+
+    addVice(viceModalPreview)
+    closeViceModal()
   }
 
   const statKeys = Object.keys(statInfo) as Array<keyof typeof statInfo>
@@ -273,7 +336,11 @@ function App() {
         <div className="panel-heading">
           <div>
             <h2>Vices</h2>
-            <p>Descriptions are shown on hover.</p>
+          </div>
+          <div className="panel-controls">
+            <button type="button" className="button button-primary" onClick={openViceModal}>
+              Add Vice
+            </button>
           </div>
         </div>
         <ul className="item-list">
@@ -283,17 +350,99 @@ function App() {
                 <strong>{vice.name}</strong>
                 <div className="vice-description">{vice.description}</div>
               </div>
-              {vice.stats && (
-                <span className="item-meta">
-                  {Object.entries(vice.stats)
-                    .map(([stat, amount]) => `${amount > 0 ? '+' : ''}${amount} ${stat}`)
-                    .join(', ')}
-                </span>
-              )}
+              <div className="item-actions">
+                <button type="button" className="button button-ghost" onClick={() => removeVice(vice.name)}>
+                  Remove
+                </button>
+              </div>
             </li>
           ))}
         </ul>
       </section>
+
+      {isViceModalOpen && (
+        <div className="modal-backdrop" role="presentation" onClick={closeViceModal}>
+          <div className="modal-card" role="dialog" aria-modal="true" aria-label="Add a vice" onClick={(event) => event.stopPropagation()}>
+            <div className="modal-header">
+              <div>
+                <h3>Add a vice</h3>
+                <p>Choose from the list or roll for one.</p>
+              </div>
+              <button type="button" className="button button-ghost" onClick={closeViceModal}>
+                Close
+              </button>
+            </div>
+
+            <div className="modal-toggle-row">
+              <button
+                type="button"
+                className={`button ${viceModalMode === 'choose' ? 'button-primary' : 'button-ghost'}`}
+                onClick={() => {
+                  const firstAvailableVice = availableVices[0]
+                  setViceModalSelection(firstAvailableVice?.name ?? '')
+                  setViceModalPreview(firstAvailableVice ?? null)
+                  setViceModalRoll(null)
+                  setViceModalMode('choose')
+                }}
+              >
+                Choose
+              </button>
+              <button
+                type="button"
+                className={`button ${viceModalMode === 'roll' ? 'button-primary' : 'button-ghost'}`}
+                onClick={rollViceForModal}
+              >
+                Roll
+              </button>
+            </div>
+
+            {viceModalMode === 'choose' ? (
+              <>
+                <label className="modal-label" htmlFor="vice-select">
+                  Select a vice
+                </label>
+                <select
+                  id="vice-select"
+                  className="panel-select"
+                  value={viceModalSelection}
+                  onChange={(event) => handleViceSelectionChange(event.target.value)}
+                  disabled={availableVices.length === 0}
+                >
+                  <option value="">Select a vice</option>
+                  {availableVices.map((vice) => (
+                    <option key={vice.name} value={vice.name}>
+                      {vice.name}
+                    </option>
+                  ))}
+                </select>
+              </>
+            ) : null}
+
+            <div className="modal-preview">
+              {viceModalPreview ? (
+                <>
+                  {viceModalRoll !== null && (
+                    <p className="modal-roll-result">Rolled {viceModalRoll}</p>
+                  )}
+                  <strong>{viceModalPreview.name}</strong>
+                  <p>{viceModalPreview.description}</p>
+                </>
+              ) : (
+                <p>No vice available to add.</p>
+              )}
+            </div>
+
+            <div className="modal-footer">
+              <button type="button" className="button button-ghost" onClick={closeViceModal}>
+                Cancel
+              </button>
+              <button type="button" className="button button-primary" onClick={confirmViceSelection} disabled={!viceModalPreview}>
+                Confirm
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   )
 }
