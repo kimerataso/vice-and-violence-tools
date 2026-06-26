@@ -1,0 +1,364 @@
+{
+  "backgrounds": [
+    {
+      "name": "Farmer",
+      "races": "All Races",
+      "stats": {
+        "SM": -2,
+        "BR": 2,
+        "MX": 1,
+        "HT": -1
+      },
+      "description": "Growing feetwheat, crops and rice, handling beetbugs, dairygrils, cottonbugs, silkspiders, and so on.",
+      "starting": "You start with an additional 10 rations, but you can't read."
+    },
+    {
+      "name": "Woodjack",
+      "races": "All Races",
+      "stats": {
+        "SM": -1,
+        "BR": 1,
+        "MX": 2,
+        "HT": -2
+      },
+      "description": "Turning trees and fungwood into furniture, tools and struts. It's a stable, safe job. Boring.",
+      "starting": "You start with an additional Bronze Axe (d8+2), but start with the Constant Daydreaming Vice."
+    },
+    {
+      "name": "Alchemist",
+      "races": "All Races",
+      "stats": {
+        "SM": 2,
+        "BR": -1,
+        "MX": -2,
+        "HT": 1
+      },
+      "description": "Creating potions and poultices for your community, occasionally midwifing and setting bones, when the local wizard's not around.",
+      "starting": "You start with an additional 3 Healing potions, but start with the Miserable Bastard Vice."
+    },
+    {
+      "name": "Miner",
+      "races": "All Races",
+      "stats": {
+        "SM": -2,
+        "BR": 2,
+        "MX": -1,
+        "HT": 1
+      },
+      "description": "Digging ore out of the ground, so it can be transmuted by the on-site wizard. Gemstones are much more valuable these days.",
+      "starting": "You start with an additional d50 jade, but you can't read."
+    },
+    {
+      "name": "Harlot",
+      "races": "All Races",
+      "stats": {
+        "SM": 1,
+        "BR": -2,
+        "MX": -1,
+        "HT": 2
+      },
+      "description": "An unaffiliated sex worker. Lucrative, but dangerous work, operating without proper accreditation.",
+      "starting": "NPCs you have Sex with always need 2 hours Rest, but you are banned from all city Brothels."
+    },
+    {
+      "name": "Urchin",
+      "races": "All Races",
+      "stats": {
+        "SM": -2,
+        "BR": 1,
+        "MX": 2,
+        "HT": -1
+      },
+      "description": "A worthless orphan, taking turns on the city streets and the Thieves Guild boarding schools.",
+      "starting": "You won't gain a Vice from killing your first humanoid enemy, but you can't read."
+    },
+    {
+      "name": "Smith's Lad",
+      "races": "All Races",
+      "stats": {
+        "SM": -2,
+        "BR": 2,
+        "MX": -1,
+        "HT": 1
+      },
+      "description": "A blacksmith's apprentice, making nails, hinges and door handles. There are few jobs more tedious than this.",
+      "starting": "You start with a +2 upgrade to your Armour, but start with the Greaseball Vice."
+    },
+    {
+      "name": "Babysitter",
+      "races": "All Races",
+      "stats": {
+        "SM": -1,
+        "BR": -2,
+        "MX": 1,
+        "HT": 2
+      },
+      "description": "Looking after the little fuckers of more important people. No wonder you took up the axe.",
+      "starting": "You start with an additional 2d20 jade, but you start with the Hothead Vice."
+    },
+    {
+      "name": "Artist",
+      "races": "All Races",
+      "stats": {
+        "SM": 2,
+        "BR": -2,
+        "MX": -1,
+        "HT": 1
+      },
+      "description": "You quickly learned boobs and butts are more profitable than murals and portraits. And much more enjoyable to look at.",
+      "starting": "You start with an additional 2d50 jade, but you start with the Chronic Horniness Vice."
+    },
+    {
+      "name": "Courier",
+      "races": "All Races",
+      "stats": {
+        "SM": 1,
+        "BR": -1,
+        "MX": 2,
+        "HT": -2
+      },
+      "description": "Shuttling people and packages from here to there, until your Waddledog mount died. A tragic backstory.",
+      "starting": "You have +5 Disposition with all Mountable creatures, but you start with the Wuss Vice."
+    },
+    {
+      "name": "Tradesman",
+      "races": "All Races",
+      "stats": {
+        "SM": -1,
+        "BR": 2,
+        "MX": 1,
+        "HT": -1
+      },
+      "description": "Butchers, weavers, tanners, winemakers, cobblers, roofers. All the jobs that need doing to keep the wheels turning. You're incredibly normal.",
+      "starting": "You have +5 Disposition with all non-Great House NPCs, but you start with the Scaredy Cat Vice."
+    },
+    {
+      "name": "Servant",
+      "races": "All Races",
+      "stats": {
+        "SM": -2,
+        "BR": 1,
+        "MX": -1,
+        "HT": 2
+      },
+      "description": "Keeping the House Lords satisfied, one way or another. Usually sweeping or cooking in a sexy outfit.",
+      "starting": "You gain +1 Hotness while wearing Skimpy armor, but start with the Slutty Vice."
+    },
+    {
+      "name": "Scion",
+      "races": "Humans, Elves, Dragonkin & Otherlings",
+      "stats": {
+        "SM": 1,
+        "BR": -2,
+        "MX": -1,
+        "HT": 2
+      },
+      "description": "An unimportant niece or nephew to a House Lord, that either caused slightly too much trouble or just got bored of the tedium of House politics.",
+      "starting": "You start with an extra 2d50 jade, but have a -5 Disposition check with Great House members."
+    },
+    {
+      "name": "Dairygirl",
+      "races": "Humans, Alloyans & Relmers",
+      "stats": {
+        "SM": -2,
+        "BR": -1,
+        "MX": 1,
+        "HT": 2
+      },
+      "description": "In a world of bugs, slugs and lizards, it's up to humans to provide the milk. Magically augmented with enormous breasts, cow-like ears, horns and a tail, over 50% of Dairygirls are biologically male.",
+      "starting": "You can provide your party with 1 milk each, which hydrates and provides +1 Brawn for 24 hours, but you require 4 rations per milk provided. You also cannot wear full or fitted armour."
+    },
+    {
+      "name": "Faeling",
+      "races": "All Races",
+      "stats": {
+        "SM": 2,
+        "BR": -1,
+        "MX": -2,
+        "HT": 1
+      },
+      "description": "You grew up in a village indebted to a lesser Fae. As an adult, you are covered in scars of concentric blue circles on your arms, and an unkept promise to a power beyond mortal comprehension.",
+      "starting": "You start with 4 additional Spell Uses, but you must become a Warlock the first time you are Downed."
+    },
+    {
+      "name": "Old-Worlder",
+      "races": "Dwarf",
+      "stats": {
+        "SM": -1,
+        "BR": 1,
+        "MX": 2,
+        "HT": -2
+      },
+      "description": "You're new to the surface, beard to the floor and draped in your father's mail. This new world is strange and humid, and the sing-songy language is hard to understand.",
+      "starting": "You start with Full Armour and an Iron Axe (d8+2), but you have -5 Disposition with all non-Dwarfs until you remove your beard at a Wizard's Tower for 50 jade."
+    },
+    {
+      "name": "Shunned",
+      "races": "Dweller",
+      "stats": {
+        "SM": 2,
+        "BR": 1,
+        "MX": -1,
+        "HT": -2
+      },
+      "description": "Dwellers are a social lot, and it seems every week there's a village festival, birthday or orgy with mandatory attendance. Avoiding too many of these got you cast out from your village.",
+      "starting": "You have a +5 Disposition check with non-Dwellers, but a -5 Disposition check with all Dwellers."
+    },
+    {
+      "name": "Runt",
+      "races": "Goblin, Elves & Dragonkin",
+      "stats": {
+        "SM": 1,
+        "BR": -2,
+        "MX": 2,
+        "HT": -1
+      },
+      "description": "Goblins, Elves & Dragonkin have multiple births at a time, and one newborn is inevitably smaller and unhealthier than the others. But their need to keep up with their siblings gives them an edge in both intelligence and toughness.",
+      "starting": "You have a +5 Disposition check with your race, but start with the Hothead Vice."
+    },
+    {
+      "name": "Sewer Knight",
+      "races": "Dwarf, Satyr, Dweller, Goblin",
+      "stats": {
+        "SM": -2,
+        "BR": 1,
+        "MX": 2,
+        "HT": -1
+      },
+      "description": "It's a miserable job, but the Sewer Knights have contributed to the health and hygiene of the Mundaian people more than they could know. However, no one can stomach the job long.",
+      "starting": "You start with a Lantern, 12 Hours of Oil and Cursed Full Armour, which gives the Bad Hygiene Vice while being worn."
+    },
+    {
+      "name": "Last Place Jouster",
+      "races": "All Races",
+      "stats": {
+        "SM": -1,
+        "BR": 1,
+        "MX": -2,
+        "HT": 2
+      },
+      "description": "Relmer's Reach has the largest Waddledog jousting scene, and you've consistently placed last in every tournament. It's time to find new opportunities.",
+      "starting": "You start with a Waddledog mount and a Wooden Lance, but start with the Painfully Embarrassed Vice."
+    },
+    {
+      "name": "Clanrider",
+      "races": "Human, Relmer, Alloyan",
+      "stats": {
+        "SM": -2,
+        "BR": 2,
+        "MX": -1,
+        "HT": 1
+      },
+      "description": "An uninteresting member of an inconsequential human clan, you absconded from a life guarding the flanks of the caravan with your only friend, your slugraptor.",
+      "starting": "You start with a Slugraptor mount, but have -10 Disposition with all human trade caravans."
+    },
+    {
+      "name": "Newly Conscious",
+      "races": "Goblin",
+      "stats": {
+        "SM": -2,
+        "BR": 1,
+        "MX": 2,
+        "HT": -1
+      },
+      "description": "You've been made newly cognisant via mushroom gas from a passing human, and the whole world is strange and new to you. Thankfully, you killed them before you lost your feral nature, which means you got their stuff.",
+      "starting": "You start with Medium Armour and an Iron Axe, but subtract 2 from your starting Life."
+    },
+    {
+      "name": "Arena Sponger",
+      "races": "All Races",
+      "stats": {
+        "SM": -2,
+        "BR": 2,
+        "MX": -1,
+        "HT": 1
+      },
+      "description": "Practically all you've known is the undercroft of your local arena, sponging blood and — as an adult — sponging gladiators. But you've picked up a trick or two from the fighters during your sweaty and blood-drenched career.",
+      "starting": "You start with two random Martial Skills, but start with 0 jade."
+    },
+    {
+      "name": "Wizard's Puppet",
+      "races": "All Races",
+      "stats": {
+        "SM": -1,
+        "BR": -2,
+        "MX": 2,
+        "HT": 1
+      },
+      "description": "Wizards for smaller towns and villages don't get as many chances to experiment on people as the city wizards, so a designated puppet is usually assigned. It's not painful, but it is humiliating, so you've buggered off.",
+      "starting": "You start with a Utility spell of your choice, but start with the Painfully Embarrassed Vice."
+    },
+    {
+      "name": "Tribe Poet",
+      "races": "Orc",
+      "stats": {
+        "SM": 1,
+        "BR": 2,
+        "MX": -1,
+        "HT": -2
+      },
+      "description": "Orcish poetry is filled with heartbreaking sadness, rousing battles and a rich, complex oral history of their tribe's deeds. The most eloquent orc is sent forth to sing the praises of their tribe and create their own legend, to add to the oral tapestry.",
+      "starting": "You start with +2 Bard Proficiency, but start with the Greedy Sod Vice."
+    },
+    {
+      "name": "Rum Runner",
+      "races": "Satyr",
+      "stats": {
+        "SM": -2,
+        "BR": 1,
+        "MX": 2,
+        "HT": -1
+      },
+      "description": "A career particularly suited to those with small frames and long legs, rum runners gallop back and forth between distilleries and taverns, keeping cellars stocked and punters pickled.",
+      "starting": "You start with +1 Exertion Uses, but start with the Drunk status effect."
+    },
+    {
+      "name": "Temple Novice",
+      "races": "All Races except Goblin & Dwarf",
+      "stats": {
+        "SM": 2,
+        "BR": -2,
+        "MX": 1,
+        "HT": -1
+      },
+      "description": "A middle class upbringing consigned you to a life of quiet study and menial chores. Now you're an adult, you're ready to get out of here.",
+      "starting": "You start with the Heal and Group Heal spells & +4 Spell Uses, but you start with the Lazy Vice & the Slutty Vice."
+    },
+    {
+      "name": "Aeldorman Assistant",
+      "races": "Elves",
+      "stats": {
+        "SM": -1,
+        "BR": 1,
+        "MX": -2,
+        "HT": 2
+      },
+      "description": "Each tree in the Bone Forest is appointed an Aeldorman, a local representative of the Asmnori Council. As an assistant, you did all the climbing up and down to every sap house on the damn tree. Bugger that.",
+      "starting": "You start with an additional 4d20 jade, but start with the Forgetful Vice."
+    },
+    {
+      "name": "Elevator Operator",
+      "races": "Dwarf, Alloyani",
+      "stats": {
+        "SM": -1,
+        "BR": -2,
+        "MX": 2,
+        "HT": 1
+      },
+      "description": "Handling the many freight elevators that take trade goods to and from the surface world to the Iron Kingdom, you decided literally anything must be more stimulating than handling a lever for the rest of your life.",
+      "starting": "You start with an Iron Halberd, Medium Armour and an additional d50 jade, but start with the Miserable Bastard Vice and the Constant Daydreaming Vice."
+    },
+    {
+      "name": "Teatsqueezer",
+      "races": "All Races",
+      "stats": {
+        "SM": -2,
+        "BR": 2,
+        "MX": -1,
+        "HT": 1
+      },
+      "description": "Milking dairygirls and delivering barrels and jugs of milk door to door. An envied profession in theory. In practice, it makes one bored of boobs.",
+      "starting": "You start with +1 Exertion Uses, but start with the Constant Daydreaming Vice."
+    }
+  ]
+}
