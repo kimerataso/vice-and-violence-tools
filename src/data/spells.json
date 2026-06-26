@@ -1,0 +1,124 @@
+{
+  "spells": [
+    {
+      "name": "Fireball",
+      "level": 1,
+      "school": "Death",
+      "description": "- 3d6 damage to one target.\n - Causes the Burning status.\n Can set fire to flammable objects."
+    },
+    {
+      "name": "Lightning",
+      "level": 1,
+      "school": "Death",
+      "description": "- 2d6 damage to d4 targets.\n - Can electrify puddles, and power magical devices."
+    },
+    {
+      "name": "Force Pull",
+      "level": 1,
+      "school": "Death",
+      "description": "- 2d4 damage to one target, pulling the target towards you and making you their target.\n - Can be used to pickpocket targets, or undress an unarmored target."
+    },
+    {
+      "name": "Force Push",
+      "level": 1,
+      "school": "Death",
+      "description": "- 2d4 damage to one target, pushing them away from the caster and making them prone.\n - Can be used to trigger traps, push over heavy objects, or lift willing humanoids up to second story windows."
+    },
+    {
+      "name": "Paralyse",
+      "level": 1,
+      "school": "Death",
+      "description": "- 1d10 damage to one target, causing them to miss 1d4 turns."
+    },
+    {
+      "name": "Flash Freeze",
+      "level": 5,
+      "school": "Death",
+      "description": "- Restrain a target until the target rolls a DC12 dice challenge to break free.\n - Does no damage itself but any damage dealt to the frozen target is multiplied by 2, until it unfreezes.\n - Can be used to create slippery surfaces, freeze water, create barriers of ice, etc."
+    },
+    {
+      "name": "Adrenaline",
+      "level": 5,
+      "school": "Death",
+      "description": "- Gives yourself or an ally 1 Exertion Use.\n- If used on an allied NPC, allows them to take an immediate Combat Action."
+    },
+    {
+      "name": "Raise Dead",
+      "level": 5,
+      "school": "Death",
+      "description": "- Revives a recently dead creature to serve you.\n- Maintains it's abilities and states from when it was alive.\n- Lasts until its death."
+    },
+    {
+      "name": "Magic Shackles",
+      "level": 5,
+      "school": "Death",
+      "description": "- 2d6 damage to one target every round while in effect.\n- The target must use two Tactical Actions to move around.\n- Lasts until you next take damage."
+    },
+    {
+      "name": "Mass Paralyse",
+      "level": 5,
+      "school": "Death",
+      "description": "- 2d10 damage to d6 targets causing them to miss 1d4 turns."
+    },
+    {
+      "name": "Heal",
+      "level": 1,
+      "school": "Light",
+      "description": "- 2d8 Life to one target.\n- Can be used to tame wounded animals, or convince humanoid enemies to stop fighting."
+    },
+    {
+      "name": "Group Heal",
+      "level": 1,
+      "school": "Light",
+      "description": "- 1d8 Life to d4 targets.\n- Can be used to pacify bar brawls, or cult bloodletting rituals."
+    },
+    {
+      "name": "Shield",
+      "level": 1,
+      "school": "Light",
+      "description": "- 2d8 bonus Armor to 1 target for 1 round.\n Can be cast on opposite walls to create a magic barrier."
+    },
+    {
+      "name": "Charm",
+      "level": 1,
+      "school": "Light",
+      "description": "- Temporarily turns 1 hostile enemy to your side for 1d8 rounds.\n- Adds 2d8 to a Disposition check.\n- The target will obey all your commands to the best of their ability."
+    },
+    {
+      "name": "Sleep",
+      "level": 1,
+      "school": "Light",
+      "description": "- The target misses their turn for d6 rounds. Any damage wakes them up.\n- Can be used to keep a sleeping enemy asleep, allowing Stealth checks to automatically succeed."
+    },
+    {
+      "name": "Sunbeam",
+      "level": 5,
+      "school": "Death",
+      "description": "- 2d8 damage to an Adjacent enemy, and 1d8 damage to a Far or Distant enemy.\n- Causes Blindness to both targets for 1 turn."
+    },
+    {
+      "name": "Enchant Weapon / Armour",
+      "level": 5,
+      "school": "Light",
+      "description": "- Adds d6+your Level in damage to yours or an ally's weapon, or adds d6+your Level to yours or an ally's armour.\n- Roll the d6 buff after successfully casting this spell, then use that number for the duration of the spell.\n- Lasts 24 hours."
+    },
+    {
+      "name": "Resurrect",
+      "level": 5,
+      "school": "Light",
+      "description": "- Revive a recently dead humanoid creature back to full health as a zombie.\n- Target might not appreciate this."
+    },
+    {
+      "name": "Enthrall",
+      "level": 5,
+      "school": "Light",
+      "description": "- Turns 1 hostile target to your side. Every 24 hours, the target can attempt to resist, DC12.\n- The target will obey all your commands to the best of their ability."
+    },
+    {
+      "name": "Big Sleep",
+      "level": 5,
+      "school": "Light",
+      "description": "- Applies the Sleep spell to 2d6 targets."
+    }
+  ]
+}
