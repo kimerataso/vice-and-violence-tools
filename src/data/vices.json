@@ -1,0 +1,134 @@
+{
+  "vices": [
+    {
+      "name": "Chain Smoker",
+      "stats": {
+        "LIFE": -5
+      },
+      "description": "Permanent -5 LIFE"
+    },
+    {
+      "name": "Giggles when Nervous",
+      "description": "-3 to Stealth checks"
+    },
+    {
+      "name": "Painfully Embarrassed",
+      "stats": {
+        "BRAWN": -1
+      },
+      "description": "-1 BRAWN"
+    },
+    {
+      "name": "Wuss",
+      "stats": {
+        "MOXIE": -1
+      },
+      "description": "-1 MOXIE"
+    },
+    {
+      "name": "Chronic Horniness",
+      "description": "Gain Horny every 12 Hours"
+    },
+    {
+      "name": "Wine Enthusiast",
+      "description": "Cannot drink water."
+    },
+    {
+      "name": "Constant Daydreaming",
+      "description": "Starts last in INITIATIVE"
+    },
+    {
+      "name": "Forgetful",
+      "stats": {
+        "SMARTS": -1
+      },
+      "description": "-1 SMARTS"
+    },
+    {
+      "name": "Miserable Bastard",
+      "description": "-5 to all Disposition Checks"
+    },
+    {
+      "name": "Bad Hygiene",
+      "description": "Needs 2 days Water to cure Filthy"
+    },
+    {
+      "name": "Bloodletter",
+      "description": "Loses 2 LIFE before every combat"
+    },
+    {
+      "name": "Hothead",
+      "description": "Gain Berserk after failing any DC"
+    },
+    {
+      "name": "Greaseball",
+      "stats": {
+        "HOTNESS": -1
+      },
+      "description": "-1 HOTNESS"
+    },
+    {
+      "name": "Twitchy Eye",
+      "description": "Unable to use BOWS or CROSSBOWS"
+    },
+    {
+      "name": "Lazy",
+      "stats": {
+        "BRAWN": -2
+      },
+      "description": "-2 BRAWN"
+    },
+    {
+      "name": "Monogamous",
+      "description": "Won't have SEX with NPCs"
+    },
+    {
+      "name": "Dopey",
+      "stats": {
+        "SMARTS": -2
+      },
+      "description": "-2 SMARTS"
+    },
+    {
+      "name": "Slutty",
+      "description": "-3 When saving against Charmed"
+    },
+    {
+      "name": "Big Softy",
+      "stats": {
+        "MOXIE": -2
+      },
+      "description": "-2 MOXIE"
+    },
+    {
+      "name": "Scaredy Cat",
+      "description": "Gains Terrified at 50% Life"
+    },
+    {
+      "name": "Creepy Smile",
+      "stats": {
+        "HOTNESS": -2
+      },
+      "description": "-2 HOTNESS"
+    },
+    {
+      "name": "Shaky Hands",
+      "description": "-3 when Lockpicking"
+    },
+    {
+      "name": "Greedy Sod",
+      "description": "Needs twice as many rations per day"
+    },
+    {
+      "name": "Milk Drinker",
+      "description": "Only drinks MILK"
+    },
+    {
+      "name": "Nightly Jerker",
+      "stats": {
+        "Exertion Uses": -1
+      },
+      "description": "-1 Exertion Uses"
+    }
+  ]
+}
