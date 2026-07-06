@@ -2,7 +2,9 @@ import { useState, useRef, useCallback } from 'react'
 import backgroundsData from './data/backgrounds.json'
 import spellsData from './data/spells.json'
 import vicesData from './data/vices.json'
-import { getRandomSamples, rollVice, rollViceSelection } from './lib/viceRoll'
+import { getRandomSamples, rollViceSelection } from './lib/viceRoll'
+import { SpellRollPanel } from './SpellRollPanel'
+import { ViceRollPanel } from './ViceRollPanel'
 import './App.css'
 
 type Spell = {
@@ -57,6 +59,8 @@ const names = ['Ari', 'Nara', 'Kael', 'Iris', 'Finn', 'Tala']
 const backgrounds = backgroundsData.backgrounds as Background[]
 const spells = spellsData.spells as Spell[]
 const vices = vicesData.vices as Vice[]
+
+// Spell roll logic moved to src/lib/spellRoll.ts
 
 const getRandomItem = <T,>(items: readonly T[]) => items[Math.floor(Math.random() * items.length)]
 
@@ -149,10 +153,7 @@ function App() {
 
   const [character, setCharacter] = useState<Character>(makeCharacter())
   const [isViceModalOpen, setIsViceModalOpen] = useState(false)
-  const [viceModalMode, setViceModalMode] = useState<'choose' | 'roll'>('choose')
-  const [viceModalSelection, setViceModalSelection] = useState(vices[0]?.name ?? '')
-  const [viceModalPreview, setViceModalPreview] = useState<Vice | null>(null)
-  const [viceModalRoll, setViceModalRoll] = useState<number | null>(null)
+  const [isSpellModalOpen, setIsSpellModalOpen] = useState(false)
 
   const rollNewCharacter = () => {
     setCharacter(makeCharacter())
@@ -181,50 +182,39 @@ function App() {
   const availableVices = vices.filter((vice) => !character.vices.some((existingVice) => existingVice.name === vice.name))
 
   const openViceModal = () => {
-    const firstAvailableVice = availableVices[0]
-    setViceModalMode('choose')
-    setViceModalSelection(firstAvailableVice?.name ?? '')
-    setViceModalPreview(firstAvailableVice ?? null)
-    setViceModalRoll(null)
     setIsViceModalOpen(true)
   }
 
   const closeViceModal = () => {
     setIsViceModalOpen(false)
-    setViceModalPreview(null)
-    setViceModalRoll(null)
   }
 
-  const handleViceSelectionChange = (viceName: string) => {
-    setViceModalSelection(viceName)
-    const chosenVice = vices.find((vice) => vice.name === viceName) ?? null
-    setViceModalPreview(chosenVice)
-    setViceModalRoll(null)
-    setViceModalMode('choose')
+  const addSpell = (spell: Spell) => {
+    setCharacter((currentCharacter) => {
+      if (currentCharacter.spells.some((existingSpell) => existingSpell.name === spell.name)) {
+        return currentCharacter
+      }
+
+      return {
+        ...currentCharacter,
+        spells: [...currentCharacter.spells, spell],
+      }
+    })
   }
 
-  const rollViceForModal = () => {
-    const rolled = rollVice(availableVices)
-
-    if (!rolled) {
-      setViceModalPreview(null)
-      setViceModalRoll(null)
-      setViceModalMode('roll')
-      return
-    }
-
-    setViceModalPreview(rolled.vice)
-    setViceModalRoll(rolled.roll)
-    setViceModalMode('roll')
+  const removeSpell = (spellName: string) => {
+    setCharacter((currentCharacter) => ({
+      ...currentCharacter,
+      spells: currentCharacter.spells.filter((spell) => spell.name !== spellName),
+    }))
   }
 
-  const confirmViceSelection = () => {
-    if (!viceModalPreview) {
-      return
-    }
+  const openSpellModal = () => {
+    setIsSpellModalOpen(true)
+  }
 
-    addVice(viceModalPreview)
-    closeViceModal()
+  const closeSpellModal = () => {
+    setIsSpellModalOpen(false)
   }
 
   const statKeys = Object.keys(statInfo) as Array<keyof typeof statInfo>
@@ -321,12 +311,24 @@ function App() {
             <h2>Spells</h2>
             <p>Tap or hover for details.</p>
           </div>
+          <div className="panel-controls">
+            <button type="button" className="button button-primary" onClick={openSpellModal}>
+              Add Spell
+            </button>
+          </div>
         </div>
         <ul className="item-list">
           {character.spells.map((spell) => (
             <li key={spell.name}>
-              <Tooltip label={`${spell.name} (L${spell.level})`} text={spell.description} />
-              <span className="item-meta">{spell.school}</span>
+              <div>
+                <Tooltip label={`${spell.name} (L${spell.level})`} text={spell.description} />
+                <span className="item-meta">{spell.school}</span>
+              </div>
+              <div className="item-actions">
+                <button type="button" className="button button-ghost" onClick={() => removeSpell(spell.name)}>
+                  Remove
+                </button>
+              </div>
             </li>
           ))}
         </ul>
@@ -362,84 +364,16 @@ function App() {
 
       {isViceModalOpen && (
         <div className="modal-backdrop" role="presentation" onClick={closeViceModal}>
-          <div className="modal-card" role="dialog" aria-modal="true" aria-label="Add a vice" onClick={(event) => event.stopPropagation()}>
-            <div className="modal-header">
-              <div>
-                <h3>Add a vice</h3>
-                <p>Choose from the list or roll for one.</p>
-              </div>
-              <button type="button" className="button button-ghost" onClick={closeViceModal}>
-                Close
-              </button>
-            </div>
+          <div className="modal-card" role="dialog" aria-modal="true" aria-label="Vice Roller" onClick={(event) => event.stopPropagation()}>
+            <ViceRollPanel items={availableVices} onAddVice={addVice} onClose={closeViceModal} />
+          </div>
+        </div>
+      )}
 
-            <div className="modal-toggle-row">
-              <button
-                type="button"
-                className={`button ${viceModalMode === 'choose' ? 'button-primary' : 'button-ghost'}`}
-                onClick={() => {
-                  const firstAvailableVice = availableVices[0]
-                  setViceModalSelection(firstAvailableVice?.name ?? '')
-                  setViceModalPreview(firstAvailableVice ?? null)
-                  setViceModalRoll(null)
-                  setViceModalMode('choose')
-                }}
-              >
-                Choose
-              </button>
-              <button
-                type="button"
-                className={`button ${viceModalMode === 'roll' ? 'button-primary' : 'button-ghost'}`}
-                onClick={rollViceForModal}
-              >
-                Roll
-              </button>
-            </div>
-
-            {viceModalMode === 'choose' ? (
-              <>
-                <label className="modal-label" htmlFor="vice-select">
-                  Select a vice
-                </label>
-                <select
-                  id="vice-select"
-                  className="panel-select"
-                  value={viceModalSelection}
-                  onChange={(event) => handleViceSelectionChange(event.target.value)}
-                  disabled={availableVices.length === 0}
-                >
-                  <option value="">Select a vice</option>
-                  {availableVices.map((vice) => (
-                    <option key={vice.name} value={vice.name}>
-                      {vice.name}
-                    </option>
-                  ))}
-                </select>
-              </>
-            ) : null}
-
-            <div className="modal-preview">
-              {viceModalPreview ? (
-                <>
-                  {viceModalRoll !== null && (
-                    <p className="modal-roll-result">Rolled {viceModalRoll}</p>
-                  )}
-                  <strong>{viceModalPreview.name}</strong>
-                  <p>{viceModalPreview.description}</p>
-                </>
-              ) : (
-                <p>No vice available to add.</p>
-              )}
-            </div>
-
-            <div className="modal-footer">
-              <button type="button" className="button button-ghost" onClick={closeViceModal}>
-                Cancel
-              </button>
-              <button type="button" className="button button-primary" onClick={confirmViceSelection} disabled={!viceModalPreview}>
-                Confirm
-              </button>
-            </div>
+      {isSpellModalOpen && (
+        <div className="modal-backdrop" role="presentation" onClick={closeSpellModal}>
+          <div className="modal-card" role="dialog" aria-modal="true" aria-label="Spell Roller" onClick={(event) => event.stopPropagation()}>
+            <SpellRollPanel onAddSpell={addSpell} onClose={closeSpellModal} />
           </div>
         </div>
       )}
