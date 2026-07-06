@@ -1,0 +1,400 @@
+{
+  "races": [
+    {
+      "name": "Goblin",
+      "stats": {
+        "SM": 0,
+        "BR": 0,
+        "MX": 1,
+        "HT": 0
+      },
+      "shortDescription": "The mischievous chaos causers of Mundain.",
+      "description": "It is said that the Gods created the goblins to give the unemployed something to do. In truth, the Gods lost all control of the goblins almost immediately. Unlike the other Awakened races, goblins are not born sentient, instead gaining self actualisation through a cocktail of hallucinogenic cave mushrooms. These somewhat sensible goblinoids call themselves Gobbos, often attaching themselves to human nomad caravans to roam the world, stockpiling mushrooms for future generations.\nThe solitary Gobbo city of Pyub is built around a gigantic tree that leaks hundreds of gallons of sap a day, which the Gobbos refine into a delicious, sweet alcohol that serves as their sole trade good throughout the world. It is theorised that the proliferation of Gobbo booze is a key factor in the impractical armour and casual nudity of the modern world. It's not, but people like a blame figure.\nFeral goblins are a common nuisance for travellers and pilgrims, raiding caravans for food, slaves and weaponry. Seasoned wanderers will purchase and carry supplies of cave mushrooms to force enlightenment on raiding goblins.\nGoblins are by far the most varied in size and shape of all the humanoid races, ranging in height of two and a half to five feet, with skin colours from vibrant green to dark grey, and ears that range from no larger than an elf's to as long as their torso. In fact, it seems the only thing that unifies the goblin race is their love of mischief and chaos.",
+      "traits": [
+        "I'm really short. Even for a Gobbo.",
+        "My family have trailed the same human caravan for generations.",
+        "It takes a lot to get me drunk. But I'm a fun drunk.",
+        "My ears are gigantic and floppy. It makes me very attractive among my people.",
+        "A guy once kicked me (d20 x 5) feet across a room.",
+        "I was chased from the city of Zirramardak for public indecency.",
+        "Half my teeth are missing after a shin biting incident.",
+        "One of my ears has a chunk missing.",
+        "I'm constantly saying that their own history, not tailing the humans.",
+        "My tits are huge.",
+        "No matter how many people are in the bed, I will hog all the blanket.",
+        "I have a big ugly scar across the side of my head.",
+        "My family settled an oasis in the Red Desert.",
+        "I'm an atheist. I know the Novice Gods exist, but I don't believe in them.",
+        "My eyes are two different colours.",
+        "I call everyone Champ.",
+        "I used to raise chickens, until one killed my sister.",
+        "I've been drunk for so long I can't remember where I live.",
+        "I can write my name. It's a big deal among Gobbo culture.",
+        "I prefer elf pussy."
+      ]
+    },
+    {
+      "name": "Dragonkin",
+      "subraces": [
+        {
+          "name": "Dracolithian",
+          "roll": 1,
+          "stats": { "SM": -1, "BR": 1, "MX": 1, "HT": 0 },
+          "description": "6 to 7 feet tall, muscular, big-chinned, dumb as a brick. Often hired as labourers and mercenaries."
+        },
+        {
+          "name": "Quetzian",
+          "roll": 2,
+          "stats": { "SM": 2, "BR": 0, "MX": -1, "HT": 0 },
+          "description": "4 to 5 feet tall, squishy, adorable, feeble but very smart. Make for excellent scholars, architects and wizards."
+        },
+        {
+          "name": "Wyvernian",
+          "roll": 3,
+          "stats": { "SM": 1, "BR": -1, "MX": 0, "HT": 1 },
+          "description": "5 to 6 feet tall, lithe, big-eyed, gorgeous and long tendriled. Great dancers, sex workers and negotiators."
+        },
+        {
+          "name": "Koboldian",
+          "roll": 4,
+          "stats": { "SM": 0, "BR": 1, "MX": -1, "HT": 1 },
+          "description": "3 to 4 feet tall, tiny, cute but the bottom rung of Dragonkin society. Often resort to thievery or banditry in groups."
+        }
+      ],
+      "traits": [
+        "One of my brain tendrils was cut off and I forgot where I live.",
+        "I'm unusually short, even for my sub-race.",
+        "My scales shimmer like burnished gold.",
+        "I'm the youngest of a clutch of twelve.",
+        "Scars from an inter-familial feud cover my body.",
+        "My parents abandoned me, but none of my siblings.",
+        "My brain tendrils reach far lower than my tail.",
+        "My tail is inconveniently long, and very thick.",
+        "I don't snore, I growl.",
+        "I'm covered in bite marks from a very fun previous lover.",
+        "One of my horns is broken.",
+        "I forgot to burn my grandma, now she's a zombie.",
+        "My sperm-sacs jiggle at the slightest provocation, and don't stop for minutes.",
+        "I was adopted by humans, now Dragonkin think I'm really weird.",
+        "I'm quietly annoyed that none of the Avatars were Dragonkin.",
+        "I have an annual duel with my own father.",
+        "I had sex with a dragon on a dare. Great guy.",
+        "I'm the first of my family to leave the River Cities.",
+        "My toe-claws are suspiciously sharp.",
+        "I like to tie my brain tendrils into a ponytail, like the elves do."
+      ]
+    },
+    {
+      "name": "Elf",
+      "stats": {
+        "SM": 0,
+        "BR": 0,
+        "MX": 0,
+        "HT": 1
+      },
+      "traits": [
+        "I once ate a whole dude. Nobody believes me.",
+        "I wear leaves over my nips and genitals for some reason.",
+        "I speak to the trees. They are very obnoxious.",
+        "I was exiled from my clan for eating a carr.",
+        "My cock has been in (d20) different people.",
+        "My pure white hair touches the floor.",
+        "I giggle uncontrollably whenever someone is dismembered.",
+        "I saw what lives under the world as a child. I don't sleep much these days.",
+        "I was the chief huntress of my clan. Lazy shits.",
+        "My brother ate my arm.",
+        "I know how to read (d12) different words.",
+        "I use the term 'hot diggety' far too often.",
+        "I love city life. Living in trees sucks balls.",
+        "My skin is covered in the story of my people.",
+        "People think I'm a fertility priestess. I just have huge hips.",
+        "A coconut bonked me on the head as a kid, now I don't talk so good.",
+        "I still don't get how currency works.",
+        "I paint my naked body in the blood of my enemies. For no real reason.",
+        "I get drunk very easily.",
+        "I fell out of a tree. My clan thinks I am a human spy."
+      ]
+    },
+    {
+      "name": "Human",
+      "stats": {
+        "SM": 1,
+        "BR": 0,
+        "MX": 0,
+        "HT": 0
+      },
+      "traits": [
+        "I'm an avid gambler, I play Lucky Seven until my purse is empty.",
+        "I was the favourite male in my wife's harem. Allegedly.",
+        "I used to belong to a Slugraptor racing circuit.",
+        "My hair is a bright red. My grandmother was a giant.",
+        "I have tattoos of my harem members on my arm.",
+        "I love it when it rains, and am usually outside dancing naked in it.",
+        "I have a gold tooth. Not sure who's it is.",
+        "My eyes are jade and gold.",
+        "An elf bit a chunk out of me. You can see the bite marks.",
+        "I can suck my own cock.",
+        "I visit my grandma a lot. She's been a zombie since I was born.",
+        "I'm a failed dairygirl. My tits are huge, and I have cow ears, but couldn't keep quota.",
+        "I like to start fights with people that I know will kick my head in.",
+        "I'm still sad about my clan's Shagbeetle dying.",
+        "I have a massive sweet tooth. I pour honey on everything.",
+        "I'm miserable inside a city's walls.",
+        "My mum hunts dragons just to bully them.",
+        "I lived with elves for a while, and now I only eat meat.",
+        "Goblins love my belly.",
+        "I keep my hair in a bun, like my whole clan."
+      ]
+    },
+    {
+      "name": "Orc",
+      "stats": {
+        "SM": -1,
+        "BR": 2,
+        "MX": 0,
+        "HT": 0
+      },
+      "traits": [
+        "I once punched a giant clear off the side of a mountain.",
+        "I invented a drink so strong, my piss is used to clean paintbrushes.",
+        "One day I will punch the sun.",
+        "I survived the cascade that destroyed the last human city.",
+        "I've had several dozen kids. I eagerly await the day they're big enough to fight me.",
+        "I funded the creation of a small temple, by stealing from a much larger temple.",
+        "I have a human lover. They're tiny and adorable.",
+        "I look a lot older than I am.",
+        "I'm fascinated by magic, and people that use it.",
+        "I love elvish fashion, though it's far too tight on me.",
+        "My tusks are tiny, and I'm a little self conscious about it.",
+        "People say my skin is yellow. I beat up those people.",
+        "My grandmother's a zombie, and my enemies provide her with replacement body parts. Now she's hotter than me.",
+        "One of my eyes is pure white.",
+        "I'm missing a couple fingers.",
+        "I'm incredibly cheerful, even in the direst moments.",
+        "My mother bakes cookies. I'm incredibly fat. And happy.",
+        "I've never had sex with an Orc.",
+        "My hair drags along the floor, collecting twigs and leaves.",
+        "I'm short enough to be mistaken for a goblin."
+      ]
+    },
+    {
+      "name": "Dwarf",
+      "stats": {
+        "SM": 0,
+        "BR": 0,
+        "MX": 2,
+        "HT": -1
+      },
+      "traits": [
+        "I just came up here a week ago.",
+        "I'm so pale I get chased by vampire hunters.",
+        "I'm covered in pink freckles.",
+        "I carry a vial of iron dust in a locket, to remind me of home.",
+        "I have no idea why, but I really don't like elves.",
+        "The hair on the small of my back looks like a little tail.",
+        "I head butted an orc in the nuts so hard his clan calls him Squeaky.",
+        "A giant sat on me the first day I got up here.",
+        "I'm constantly surprised the people up here still use magic.",
+        "I found out Shaw'Taaz sounds a lot like Short Arse, but I don't have the heart to tell the other Dwarfs.",
+        "I wear lots of diamond jewellery, despite diamonds being basically worthless.",
+        "My cock is short but thick. I call it my hidden fist.",
+        "I think centaurs are very attractive.",
+        "I love getting drunk.",
+        "My hair stays quite short. People think I'm rich.",
+        "I love it up here.",
+        "I was once an iron trader, but I got lost on the way home.",
+        "I have dozens of tiny hairy children waiting for me.",
+        "My first sexual experience was with a Satyr. It was very illuminating.",
+        "I'm over five feet tall. Dwarfs call me Lurch."
+      ]
+    },
+    {
+      "name": "Centaur",
+      "stats": {
+        "SM": 0,
+        "BR": 0,
+        "MX": 0,
+        "HT": 0
+      },
+      "statChoice": { "type": "simple", "amount": 1 },
+      "traits": [
+        "I have enormous antlers, my long hair drapes from them.",
+        "I used to guide travellers into traps to steal their stuff.",
+        "I'm flexible enough to sleep on my own back.",
+        "I moo when I orgasm.",
+        "My fur is turning grey. I want to go out in a blaze of glory.",
+        "My brother kicked me in the head and I forgot where I live.",
+        "I eat sugar cubes a lot more than I should.",
+        "I like to hide my butt behind curtains and pretend I'm a very tall elf.",
+        "I once kicked a goblin clear over a restaurant.",
+        "Anyone that gives me a Soul Carrot I will follow to the ends of the earth.",
+        "I was adopted by an Orc couple. Now I can throw a good punch.",
+        "I once had sex with a very accommodating human.",
+        "I like to wear jewellery made from the bones and teeth of my enemies. It's not a custom, I just think it looks cool.",
+        "My eyes are two different colours. Each.",
+        "I dedicated my kills to a god that doesn't exist.",
+        "I always assume I'm gonna die during any battle.",
+        "One of my legs is amputated.",
+        "My fur is long enough for people to sleep under me.",
+        "My ears twitch when I'm annoyed. It's very obvious.",
+        "I have an ugly scar across my flank."
+      ]
+    },
+    {
+      "name": "Satyr",
+      "stats": {
+        "SM": 0,
+        "BR": 0,
+        "MX": -1,
+        "HT": 2
+      },
+      "traits": [
+        "I have d100 children, and I've met none of them.",
+        "I was raised by goblins, and haven't met a person I couldn't outdrink at a table.",
+        "My cock is longer than my torso. I forget things when it gets hard.",
+        "I head-butted a guard to death.",
+        "I was born to a giant mother, my fur is red.",
+        "I ate the cave mushrooms that awaken Goblins. Now I call everything \"groovy\".",
+        "I have an adorable lisp.",
+        "I get pregnant a lot. A LOT.",
+        "I was the assistant to a witch, until she exploded.",
+        "I actually know my father.",
+        "My ears are incredibly ticklish. I squeak when they're touched.",
+        "I'm covered in tattoos.",
+        "I've been to prison, a lot.",
+        "I'm in love with a centaur.",
+        "One of my horns broke off during a particularly frisky sexual rendezvous.",
+        "I was raised by elves, but exiled when I ate a carrot.",
+        "I'm quite happy sleeping in the woods, not much need for stuff.",
+        "My tail is huge, and wags of its own accord.",
+        "One of my horns is longer than the other. It's a little embarrassing.",
+        "My boobs jiggle when I blink."
+      ]
+    },
+    {
+      "name": "Dweller",
+      "stats": {
+        "SM": 2,
+        "BR": -1,
+        "MX": 0,
+        "HT": 0
+      },
+      "traits": [
+        "My ears wiggle when I'm enjoying myself.",
+        "I wobble excessively at the slightest poke or prod.",
+        "I always take advantage of being at genital height to humans.",
+        "I'm only here to get rich.",
+        "My prize possession is a pipe as tall as I am.",
+        "I take my trousers off when I go indoors.",
+        "If I'm not drunk, I'm hungover.",
+        "I always have a plan to get rich.",
+        "No matter what I'm wearing, my tits fall out when I sneeze.",
+        "I giggle when I'm doing something devious.",
+        "I carry an ale mug that's larger than my thigh.",
+        "I'm always sporting a black eye.",
+        "I'm my village's village idiot.",
+        "I'm of the opinion that money is the only thing that can actually buy happiness.",
+        "I fiddle with a lucky coin when I'm nervous.",
+        "I own the world's comfiest sofa. I miss it every day.",
+        "My parents disapprove of my galavanting.",
+        "My arse is as wide as an elf's. I take up a surprising amount of space.",
+        "I wear red clothing in urban areas so people don't trip over me.",
+        "At every opportunity, I will get a tall person to carry me."
+      ]
+    },
+    {
+      "name": "Relmer",
+      "stats": {
+        "SM": 1,
+        "BR": 0,
+        "MX": -1,
+        "HT": 1
+      },
+      "traits": [
+        "I was a nanny to a wealthy family's children.",
+        "My whitecloth is now pink from all the blood I've spilt on it.",
+        "I tuck my cock up into my belt to keep it from flopping past my knees.",
+        "My hair reaches the floor.",
+        "I sleep exclusively in compromising positions.",
+        "I'm not smug, my eyes just don't open very far.",
+        "My extended family is human, so I never got braces.",
+        "I collect ugly tattoos.",
+        "I always carry a cheesy romance novel with me.",
+        "I'm miserable when away from the city night-life.",
+        "I'm so often mistaken for a female that I've started to embrace it. In several ways.",
+        "I keep my hair in a tight ponytail. My forehead is huge.",
+        "I've never bought a drink in my life. I just flirt for them.",
+        "I like to write books about imaginary worlds.",
+        "I have excellent eyesight. I just wear glasses to fit in.",
+        "I consider even whitecloth to be too much clothing.",
+        "I like to hang around bounty boards and make eyes at all the sexy vigilantes.",
+        "I keep my first knocked out tooth in a resin talisman around my neck.",
+        "I'm very well read, and very annoying about it.",
+        "I'm immediately, unspeakably horny at the slightest touch of my ears."
+      ]
+    },
+    {
+      "name": "Alloyan",
+      "stats": {
+        "SM": -1,
+        "BR": 0,
+        "MX": 1,
+        "HT": 1
+      },
+      "traits": [
+        "My hair has a streak of red through it. I think one of my relatives shagged a giant.",
+        "My butt often gets stuck in doorways.",
+        "I was born underground, in the Iron Kingdom. I was exiled the moment I got too tall.",
+        "I'm a very happy drunk.",
+        "I come from a long line of blacksmiths. A lot of the weird faces on bronze armour are my family members.",
+        "My parents abandoned me, but none of my siblings.",
+        "I have Dwarven tattoos all over my arms.",
+        "I get mistaken for Human surprisingly often.",
+        "My hair reaches my thighs.",
+        "I'm due for a quite hefty inheritance when my ghost grandfather dissipates.",
+        "My ears are full of iron rings and studs.",
+        "I'm constantly glistening with sweat.",
+        "My boobs are quite big for an Alloyan.",
+        "I fashion all my clothing out of spare belts.",
+        "I can press an entire barrel of funflower oil just by sitting on it.",
+        "I have heterochromia.",
+        "I'm happiest during boring tasks, like making chainmail.",
+        "I was adopted by Dwellers.",
+        "My former lover was a centaur. I still ache.",
+        "I have a sizeable bug collection at home."
+      ]
+    },
+    {
+      "name": "Otherling",
+      "stats": {
+        "SM": 2,
+        "BR": -1,
+        "MX": 0,
+        "HT": 0
+      },
+      "statChoice": { "type": "paired", "bonus": 2, "penalty": -1 },
+      "traits": [
+        "I came from a Dragonkin egg. It was weird.",
+        "One of my horns broke, and grew back longer.",
+        "I like to tie myself up with my own tail.",
+        "I'm covered in little pink freckles.",
+        "I use my tail to tickle people in large crowds.",
+        "None of my parents clothes fit me so I've been practically naked for most of my life.",
+        "I have buck teeth and braces, like a Relmer.",
+        "My ears are gigantic.",
+        "I've spent most of my adult life in a local tavern.",
+        "I'm on a quest for revenge.",
+        "I was left on the steps of a city temple, and brought up as a scholar.",
+        "My hair can only be described as an explosion.",
+        "I found a pair of gambeson leg warmers, now they're my prized possession.",
+        "My cock has fleshy rivets around the head. I'm told they're very fun.",
+        "I wink at strangers.",
+        "I was born from a sorcerer's experiment.",
+        "I have strange circular scars running along my arm.",
+        "I have a short temper, and it gets me into trouble.",
+        "I'm fascinated by stuff from the Imperial age.",
+        "I keep a selection of herbs in a little satchel for cooking."
+      ]
+    }
+  ]
+}
